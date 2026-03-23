@@ -1,5 +1,4 @@
 .postItem {
-  min-width: 800px;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
@@ -7,6 +6,22 @@
   background-color: #f9f9f9;
   transition: box-shadow 0.2s ease;
   list-style-type: none;
+}
+@media only screen and (min-width: 340px) {
+  .postItem {
+    min-width: 220px;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .postItem {
+    max-width: 650px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .postItem {
+    min-width: 800px;
+  }
 }
 
 .postItem:hover {
@@ -42,8 +57,7 @@
   transition: transform 0.2s;
 }
 
-.commentButton:hover,
-.commentButton:focus {
+.commentButton:hover {
   transform: scale(1.2);
 }
 
