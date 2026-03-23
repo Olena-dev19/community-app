@@ -42,7 +42,8 @@
   transition: transform 0.2s;
 }
 
-.commentButton:hover {
+.commentButton:hover,
+.commentButton:focus {
   transform: scale(1.2);
 }
 
