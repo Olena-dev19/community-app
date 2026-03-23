@@ -16,10 +16,10 @@ app.use(express.json());
 app.use("/api", postsRoutes);
 app.use("/api", commentsRoutes);
 
-await connectMongoDB().then(() => {
-  app.get("/", (req, res) => {
-    res.send("Backend works 🚀");
-  });
+await connectMongoDB();
+
+app.get("/", (req, res) => {
+  res.send("Backend works 🚀");
 });
 
 app.use(errorMiddleware);
