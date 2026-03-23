@@ -22,6 +22,11 @@ const CommentItem = ({ comment }: Props) => {
       }),
     );
   };
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleReply();
+    }
+  };
   const handleReply = () => {
     if (!replyText.trim()) return;
 
@@ -76,6 +81,7 @@ const CommentItem = ({ comment }: Props) => {
           <input
             value={replyText}
             onChange={(e) => setReplyText(e.target.value)}
+            onKeyDown={handleKeyDown}
             placeholder="Write a reply..."
           />
           <button onClick={handleReply}>Send</button>

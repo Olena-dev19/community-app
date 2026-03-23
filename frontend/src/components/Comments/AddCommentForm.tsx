@@ -12,6 +12,11 @@ interface Props {
 const AddCommentForm = ({ postId, parentComment }: Props) => {
   const [text, setText] = useState("");
   const dispatch = useAppDispatch();
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
   const handleSubmit = () => {
     if (!text.trim()) return;
 
@@ -24,6 +29,7 @@ const AddCommentForm = ({ postId, parentComment }: Props) => {
     <div className={styles.addComment}>
       <input
         value={text}
+        onKeyDown={handleKeyDown}
         onChange={(e) => {
           setText(e.target.value);
         }}

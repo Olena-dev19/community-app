@@ -33,24 +33,25 @@
 
 /* Інпут для імені */
 .input {
-  width: 100%;
+  width: 320px;
   padding: 0.75rem;
   margin-bottom: 1.25rem;
   border-radius: 8px;
   border: 1px solid #cccccc;
   font-size: 1rem;
   transition: border-color 0.2s;
+  border: 0.5px solid rgb(149, 109, 123);
 }
 
 .input:focus {
-  border-color: #3b82f6; /* синій відтінок для фокусу */
+  border-color: rgb(138, 103, 116);
   outline: none;
 }
 
 /* Кнопка збереження */
 .button {
   padding: 0.75rem 1.5rem;
-  background-color: #3b82f6;
+  background-color: rgb(149, 109, 123);
   color: white;
   border: none;
   border-radius: 8px;
@@ -60,7 +61,7 @@
 }
 
 .button:hover {
-  background-color: #2563eb;
+  background-color: rgb(138, 103, 116);
 }
 
 /* Анімація плавного з'явлення модалки */

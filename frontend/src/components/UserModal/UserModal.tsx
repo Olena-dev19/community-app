@@ -7,6 +7,11 @@ const UserModal = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
   const handleSubmit = () => {
     if (!name.trim()) return;
 
@@ -20,6 +25,7 @@ const UserModal = () => {
         <input
           className={styles.input}
           value={name}
+          onKeyDown={handleKeyDown}
           onChange={(e) => setName(e.target.value)}
         />
         <button className={styles.button} onClick={handleSubmit}>
