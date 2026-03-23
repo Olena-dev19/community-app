@@ -1,0 +1,24 @@
+{
+  "name": "community-app",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\""
+  },
+  "author": "Olena Gerich <gerichpingvin@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "react-redux": "^9.2.0"
+  },
+  "overrides": {
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0"
+}
+}

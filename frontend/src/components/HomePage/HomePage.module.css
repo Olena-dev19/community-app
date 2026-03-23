@@ -1,0 +1,25 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  list-style-type: none;
+}
+
+.createBtn {
+  margin-left: 290px;
+  font-size: medium;
+  background: rgb(199, 152, 169);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 20px;
+  width: 260px;
+  height: 50px;
+}
+.createBtn:hover {
+  background: rgb(85, 60, 69);
+}
