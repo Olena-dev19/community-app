@@ -27,9 +27,11 @@ const HomePage = () => {
   };
   return (
     <div className={styles.container}>
-      <button className={styles.createBtn} onClick={handleClick}>
-        Create Post
-      </button>
+      <div className={styles.btnWrapper}>
+        <button className={styles.createBtn} onClick={handleClick}>
+          Create Post
+        </button>
+      </div>
       <ul className={styles.postList}>
         {posts.map((post) => (
           <PostItem

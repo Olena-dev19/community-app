@@ -6,8 +6,13 @@
   list-style-type: none;
 }
 
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .createBtn {
-  margin-left: 290px;
   font-size: medium;
   background: rgb(199, 152, 169);
   color: white;
@@ -19,7 +24,18 @@
   margin-top: 20px;
   width: 260px;
   height: 50px;
+  margin-bottom: 35px;
 }
 .createBtn:hover {
   background: rgb(85, 60, 69);
+}
+
+.postList {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
